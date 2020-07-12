@@ -124,6 +124,16 @@ func (stream *Stream) WriteNil() {
 	stream.writeFourBytes('n', 'u', 'l', 'l')
 }
 
+// WriteNil write slice null to stream
+func (stream *Stream) WriteSliceNil() {
+	stream.writeTwoBytes('[', ']')
+}
+
+// WriteNil write map null to stream
+func (stream *Stream) WriteMapNil() {
+	stream.writeTwoBytes('{', '}')
+}
+
 // WriteTrue write true to stream
 func (stream *Stream) WriteTrue() {
 	stream.writeFourBytes('t', 'r', 'u', 'e')

@@ -26,7 +26,7 @@ type sliceEncoder struct {
 
 func (encoder *sliceEncoder) Encode(ptr unsafe.Pointer, stream *Stream) {
 	if encoder.sliceType.UnsafeIsNil(ptr) {
-		stream.WriteNil()
+		stream.WriteSliceNil()
 		return
 	}
 	length := encoder.sliceType.UnsafeLengthOf(ptr)

@@ -148,6 +148,9 @@ func (encoder *structEncoder) Encode(ptr unsafe.Pointer, stream *Stream) {
 		/*	if field.encoder.omitempty && field.encoder.IsEmpty(ptr) {
 			continue
 		}*/
+		if field.encoder.IsEmpty(ptr) {
+
+		}
 		if field.encoder.IsEmbeddedPtrNil(ptr) {
 			continue
 		}
