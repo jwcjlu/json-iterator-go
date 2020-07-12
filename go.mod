@@ -1,4 +1,4 @@
-module github.com/json-iterator/go
+module git.code.oa.com/wsrd_tools_platforms/tcm/json-iterator-go
 
 go 1.12
 
